@@ -1,0 +1,26 @@
+//POST https://localhost:8080/api/v1/answers HTTP/1.1\r\ncontent-type: application/json {"questionId": "8","presenterId": "2","reviewerId": "1","answer": "HELLO WORLD!"}
+
+//curl http://localhost:8080/api/v1/questions
+
+
+//returns all presenters as json objects
+GET http://localhost:8080/api/v1/presenters HTTP/1.1
+
+//returns presenter with id = 2
+GET http://localhost:8080/api/v1/presenters/2 HTTP/1.1
+
+//returns Bad Request because no presenter has id = 10
+GET http://localhost:8080/api/v1/presenters/10 HTTP/1.1
+
+//returns all multiple choice and short answer questions
+GET http://localhost:8080/api/v1/questions HTTP/1.1
+
+//returns question #8 with all relevant info
+GET http://localhost:8080/api/v1/questions/8 HTTP/1.1
+
+//returns Bad Request because there is no question with that id
+GET http://localhost:8080/api/v1/questions/20 HTTP/1.1
+
+//returns all of the presentation titles and dates
+GET http://localhost:8080/api/v1/titles HTTP/1.1
+
